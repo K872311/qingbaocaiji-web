@@ -1,0 +1,6 @@
+# 手工恶意域名，run_all 每次都会读这份文件入库（库里已有的自动跳过）
+# 每行一个：域名[, 家族名[, 来源]]，来源不写默认 Manual
+# 支持去活写法和 URL，会自动只取主机名：
+#   evil-c2.com
+#   bad[.]example[.]net, AsyncRAT
+#   hxxps://phish.example.org/login, Phishing, 内部通报

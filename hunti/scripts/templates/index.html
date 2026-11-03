@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<title>威胁情报中心</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2l11 4.5v8.3c0 7-4.7 12.6-11 15.2C9.7 27.4 5 21.8 5 14.8V6.5L16 2z' fill='%232c6cf6'/%3E%3Ccircle cx='16' cy='15' r='4' fill='%235fd0ff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/app.css?v=41">
+</head>
+<body>
+<div class="topbar" id="topbar"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 32 32" fill="none"><path d="M16 2l11 4.5v8.3c0 7-4.7 12.6-11 15.2C9.7 27.4 5 21.8 5 14.8V6.5L16 2z" fill="#2c6cf6"/><path d="M16 6.2l7.6 3.1v5.6c0 4.8-3.2 8.8-7.6 10.7-4.4-1.9-7.6-5.9-7.6-10.7V9.3L16 6.2z" fill="#0d1631"/><circle cx="16" cy="15.2" r="3.4" fill="#5fd0ff"/></svg>
+      威胁情报中心
+    </a>
+    <nav class="nav-links">
+      <a href="#/" data-r="home">首页</a>
+      <a href="#/intel" data-r="intel">情报动态</a>
+      <div class="nav-drop" id="navTopics">
+        <button type="button" class="nav-drop-btn" data-r="topics" aria-haspopup="true" aria-expanded="false">
+          专项情报 <span class="caret">▾</span>
+        </button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="#/intel?topic=apt" data-r="topic-apt" role="menuitem"><i style="background:#d4282d">APT</i><span>APT</span><em>定向攻击组织</em></a>
+          <a href="#/intel?topic=c2" data-r="topic-c2" role="menuitem"><i style="background:#2c6cf6">C2</i><span>C2</span><em>命令控制基础设施</em></a>
+          <a href="#/intel?topic=cybercrime" data-r="topic-cybercrime" role="menuitem"><i style="background:#c75a0a">黑</i><span>黑产</span><em>窃密 / 钓鱼 / 灰产</em></a>
+          <a href="#/intel?topic=ransomware" data-r="topic-ransomware" role="menuitem"><i style="background:#b45309">勒</i><span>勒索</span><em>勒索软件相关情报</em></a>
+          <a href="#/darkweb" data-r="darkweb-sub" role="menuitem"><i style="background:#7c2d12">暗</i><span>暗网勒索</span><em>泄露站点动态</em></a>
+          <a href="#/" data-r="submit" role="menuitem" id="navSubmit"><i style="background:#0b8a7d">+</i><span>提交情报</span><em>手工录入 IOC</em></a>
+        </div>
+      </div>
+      <a href="#/darkweb" data-r="darkweb">暗网动态</a>
+      <a href="#/apt" data-r="apt">APT / 家族</a>
+      <a href="#/batch" data-r="batch">批量研判</a>
+      <a href="#/watch" data-r="watch">关注<span class="nav-badge" id="watchBadge"></span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="nav-status" id="navStatus" title="情报库状态"></div>
+      <div class="nav-search" id="navSearch"></div>
+    </div>
+  </div>
+</header>
+
+<main id="view"></main>
+<div class="foot">本地威胁情报库 · 仅供内部安全研判使用</div>
+
+<div class="mask" id="mask"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+<button class="totop" id="totop" title="回到顶部" aria-label="回到顶部">↑</button>
+
+<script src="/static/app.js?v=41" defer></script>
+</body>
+</html>

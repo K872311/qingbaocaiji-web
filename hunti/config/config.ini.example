@@ -1,0 +1,9 @@
+[Settings]
+rss_check_interval = 30
+max_workers = 5
+request_timeout = 30
+output_dir = .
+
+[IOC Database]
+; ioc_data.db 输出路径，留空则用 output/ioc_data.db
+ioc_db_path = 

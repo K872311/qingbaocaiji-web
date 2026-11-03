@@ -1,0 +1,67 @@
+# ====== 脚本目录下的生成数据（应只存在 output/） ======
+scripts/merged_*
+scripts/cleaned_*
+scripts/comprehensive_*
+scripts/threat_actor_*
+scripts/derp_*
+scripts/apt_*
+scripts/*.json
+scripts/*.txt
+
+# ====== 敏感文件 ======
+config/config.ini
+config/api_key.txt
+config/tc_feed_token.txt
+config/threatfox_auth_key.txt
+config/otx_api_key.txt
+config/abuseipdb_api_key.txt
+config/ismalicious_api_key.txt
+*.key
+*.pem
+*.cert
+*.crt
+credentials*
+secret*
+token*
+
+# ====== Python缓存 ======
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ====== 输出数据（自动生成） ======
+output/
+
+# ====== 临时文件 ======
+temp/
+tmp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# ====== IDE ======
+.idea/
+.vscode/
+.claude/
+.cursor/
+*.suo
+*.user
+*.sln
+*.csproj
+
+# ====== 操作系统 ======
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# ====== 日志 ======
+*.log
+logs/
+
+# ====== 大文件 ======
+*.zip
+*.rar
+*.7z
+*.tar.gz
